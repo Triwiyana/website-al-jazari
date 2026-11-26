@@ -1,0 +1,467 @@
+
+/* =========================
+   RESET & GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07142e;
+    color: #ffffff;
+    font-family: Georgia, serif;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(7, 20, 46, 0.96);
+    border-bottom: 1px solid rgba(198, 164, 94, 0.2);
+}
+
+.navbar {
+    min-height: 85px;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #d6b36a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #d4d9e5;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6b36a;
+}
+
+.menu-toggle {
+    display: none;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 48%;
+    z-index: 2;
+}
+
+.subtitle {
+    color: #d6b36a;
+    font-size: 11px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 8vw, 105px);
+    line-height: 0.95;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.description {
+    color: #b9c3d6;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 430px;
+    margin-bottom: 25px;
+}
+
+.year {
+    color: #d6b36a;
+    letter-spacing: 4px;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 22px;
+    border: 1px solid #d6b36a;
+    color: #d6b36a;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #d6b36a;
+    color: #07142e;
+}
+
+.hero-image {
+    width: 48%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #6f603e;
+    background:
+        radial-gradient(circle at center, #31496a, #101d37);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 43%;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.image-fallback {
+    display: none;
+}
+
+.image-error .image-fallback {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #d6b36a;
+    letter-spacing: 4px;
+    line-height: 2;
+    font-size: 18px;
+    padding: 30px;
+}
+
+.hero-number {
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    color: #d6b36a;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   SECTION LABEL
+========================= */
+
+.section-label {
+    color: #d6b36a;
+    font-size: 11px;
+    letter-spacing: 3px;
+    border-bottom: 1px solid rgba(214, 179, 106, 0.3);
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+}
+
+/* =========================
+   HISTORY
+========================= */
+
+.introduction {
+    padding: 100px 10%;
+    background: #101e38;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.intro-content h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+.intro-description {
+    color: #bac4d5;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 75px;
+}
+
+.timeline-item {
+    border-top: 2px solid #d6b36a;
+    padding-top: 25px;
+}
+
+.timeline-item span {
+    color: #d6b36a;
+    font-size: 24px;
+}
+
+.timeline-item h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.timeline-item p {
+    color: #aebbd0;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+/* =========================
+   INVENTIONS
+========================= */
+
+.inventions {
+    padding: 100px 10%;
+    background: #07142e;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:last-child {
+    color: #aebbd0;
+    line-height: 1.8;
+}
+
+.invention-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.invention-card {
+    position: relative;
+    padding: 35px 28px;
+    min-height: 330px;
+    background: #112440;
+    border: 1px solid rgba(214, 179, 106, 0.3);
+    transition: 0.3s;
+}
+
+.invention-card:hover {
+    transform: translateY(-8px);
+    border-color: #d6b36a;
+}
+
+.card-number {
+    color: #d6b36a;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.invention-icon {
+    font-size: 45px;
+    margin: 35px 0 25px;
+}
+
+.invention-card h3 {
+    color: #e5c982;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.invention-card p {
+    color: #b5c0d2;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.invention-card > span {
+    color: #d6b36a;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   LEGACY
+========================= */
+
+.legacy {
+    padding: 110px 10%;
+    text-align: center;
+    background:
+        linear-gradient(rgba(7, 20, 46, 0.93),
+        rgba(7, 20, 46, 0.97)),
+        repeating-linear-gradient(
+            45deg,
+            #172b48,
+            #172b48 2px,
+            #07142e 2px,
+            #07142e 20px
+        );
+}
+
+.legacy h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.2;
+    font-weight: normal;
+    margin: 25px 0;
+}
+
+.legacy-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #bac4d5;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.legacy-quote {
+    max-width: 650px;
+    margin: 55px auto 0;
+    padding: 30px;
+    border-top: 1px solid #d6b36a;
+    border-bottom: 1px solid #d6b36a;
+    color: #e5c982;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #040d1e;
+}
+
+footer h2 {
+    color: #d6b36a;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #9ba8bd;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+.copyright {
+    margin-top: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: #07142e;
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 60px 8%;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image {
+        height: 450px;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .invention-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-number {
+        display: none;
+    }
+}
